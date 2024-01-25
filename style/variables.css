@@ -1,0 +1,12 @@
+:root {
+    --white:#FFFFFF;
+    --black:#000000;
+    --violet:#510396;
+
+    --large-fz:clamp(2.5rem, 1.6456rem + 3.7975vw, 4rem);
+    --big-fz: clamp(1.5rem, 0.6456rem + 3.7975vw, 3rem);
+    --medium-fz: clamp(1.25rem, 0.6804rem + 2.5316vw, 2.25rem);
+    --normal-fz:clamp(1rem, 0.7152rem + 1.2658vw, 1.5rem);
+    --small-fz: clamp(1rem, 0.8576rem + 0.6329vw, 1.25rem);
+    --extra-small-fz: clamp(0.5rem, 0.2864rem + 0.9494vw, 0.875rem);
+}
