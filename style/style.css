@@ -629,6 +629,13 @@ input[type=checkbox]:checked + label::before {
     color: var(--white);
 }
 
+.footer__info {
+    display: flex;
+    gap: clamp(1.5rem, -13.0714rem + 30.3571vw, 5.75rem);
+    flex-wrap: wrap;
+    margin-bottom: clamp(2.5rem, 2.2152rem + 1.2658vw, 3rem);
+}
+
 .footer__text {
     font-size: var(--small-fz);
     margin-bottom: clamp(1.25rem, 1.1076rem + 0.6329vw, 1.5rem);
@@ -639,7 +646,6 @@ input[type=checkbox]:checked + label::before {
     display: flex;
     flex-direction: column;
     gap: clamp(0.75rem, 0.5364rem + 0.9494vw, 1.125rem);
-    margin-bottom: clamp(2.5rem, 2.2152rem + 1.2658vw, 3rem);
 }
 
 .footer__contact-link {
@@ -662,6 +668,9 @@ input[type=checkbox]:checked + label::before {
 }
 .footer__contact-link--mail::before {
     background-image: url('../img/icon/02.svg');
+}
+.footer__contact-link--address::before {
+    background-image: url('../img/icon/04.svg');
 }
 
 
