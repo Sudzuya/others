@@ -33,11 +33,25 @@ document.addEventListener('DOMContentLoaded', ()=> {
   const burger = document.querySelector('.burger-menu__burger')
 
   burger.addEventListener('click', ()=> {
-    burger.classList.toggle('active')
-    burger.nextElementSibling.classList.toggle('show')
+    document.documentElement.classList.toggle('open-menu')
   })
 
   
+  const linkMenu = document.querySelectorAll('.burger-menu a[href]')
+  const linkMenuWithHref = Array.from(linkMenu).filter((link)=> link.hash ? link : '')
+
+
+  linkMenuWithHref.forEach((link)=> {
+    link.addEventListener('click', ()=> {
+      closeMenu ()
+    })
+  })
+
+  const closeMenu = () => {
+    let html = document.documentElement
+
+    if (html.classList.contains('open-menu')) html.classList.remove('open-menu')
+  }
 
 
 addPopup('test', 'какой то текст')
@@ -47,15 +61,15 @@ const accordionItems = document.querySelectorAll('.accordion__item')
 
 accordionItems.forEach((item)=> {
   
-  const itemTitle = item.querySelector('.accordion__title')
-  const itemContent = item.querySelector('.accordion__content')
+    const itemTitle = item.querySelector('.accordion__title')
+    const itemContent = item.querySelector('.accordion__content')
 
 
-  itemTitle.addEventListener('click', ()=> {
-    item.classList.toggle('show')
+    itemTitle.addEventListener('click', ()=> {
+      item.classList.toggle('show')
+    })
+
   })
-
-})
 
 })
 
